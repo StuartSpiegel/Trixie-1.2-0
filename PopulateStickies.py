@@ -1,6 +1,5 @@
 from lxml import etree
-from numpy.doc.constants import lines
-
+import lines
 w = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 v = "{urn:schemas-microsoft-com:vml}"
 a = "{http://schemas.openxmlformats.org/drawingml/2006/main}"
