@@ -1,5 +1,4 @@
 from lxml import etree
-
 from numpy.doc.constants import lines
 
 w = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
@@ -144,7 +143,7 @@ def populate_text_General_statement(run, storyCategory, storyBullets):
                                        w + "rsidRDefault": "00924485", w + "rsidP": "002853AF"})  # 00524C8F
 
         # Insert iteratively each sub-bullet as its own story point
-        # Do the initial check here to see if the sub bullets have their own story points.
+        # TODO:  Do the initial check here to see if the sub bullets have their own story points.
         startIndex = 0
     for k, bulletText in zip(range(len(storyBullets)), storyBullets):
         # Two asterisk indicates that the bullet text in storyBullets is actually describing the story,
@@ -185,21 +184,28 @@ def populate_text_General_statement(run, storyCategory, storyBullets):
                 txbx.insert(-1, bullet)
 
 
-def populate_text_acceptanceCrtieria(run, storyCategory, storyDescription, storyBullets, acceptanceCrtieria):
-    for txbx in run.iter(w + "txbxContent"):
+def populate_text_acceptanceCrtieria(run, storyCategory, storyDescription, storyBullets, acceptanceCriteria):
+    for txbx in run.iter(w + "txbxContent"):  # Get first available Paragraph
         # Add story category to first existing paragraph
         for subParagraph in txbx.iter(w + "p"):
             populate_category(subParagraph, storyCategory)
+            break
+        # Populates the text with the requested acceptance Criteria
+        for subParagraph in txbx.iter(w + "p"):
+            populate_category(acceptanceCriteria, storyCategory)
             break
 
         # Add new paragraph containing the story points
         content = etree.Element(w + "p",
                                 attrib={w + "rsidR": "0014164D", w + "rsidRPr": "00DB3E27",
                                         w + "rsidRDefault": "00143C72", w + "rsidP": "00DB3E27"})
+
         newRun = etree.Element(w + "r")
         newText = etree.Element(w + "t")
         newText.text = storyDescription
+        newText.text = acceptanceCriteria
         newRun.insert(0, newText)
+        newRun.insert(1, acceptanceCriteria)  # This line may not be needed
         content.insert(0, newRun)
         txbx.insert(1, content)
 
@@ -208,14 +214,6 @@ def populate_text_acceptanceCrtieria(run, storyCategory, storyDescription, story
             bullet = etree.Element(w + "p",
                                    attrib={w + "rsidR": "00924485", w + "rsidRPr": "00924485",
                                            w + "rsidRDefault": "00924485", w + "rsidP": "002853AF"})  # 00524C8F
-
-            # Add the acceptance Criteria here
-            acceptanceCrtieria = etree.Element(w + "p",
-                                               attrib={w + "rsidR": "00924485", w + "rsidRPr": "00924485",
-                                                       w + "rsidRDefault": "00924485", w + "rsidP": "002853AF"})
-
-            acceptanceCrtieria.insert(0, pPr)  # Actually insert the acceptanceCriteria field here --> append to the
-            # document
 
             # TODO: Adjust the paragraph formatting here to better accommodate the acceptanceCriteria field name
             # Add paragraph formatting

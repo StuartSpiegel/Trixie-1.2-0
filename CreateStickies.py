@@ -1,5 +1,4 @@
 import os
-
 from docx import Document
 from CommonUtils import read_input
 from PopulateStickies import populate_title, populate_color, populate_text, populate_points
