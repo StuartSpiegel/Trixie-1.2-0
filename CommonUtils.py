@@ -1,7 +1,6 @@
 import argparse
 import os
 import random
-import matplotlib.colors
 from colorRange import colorRange_Instance
 
 # CommonUtils.py acts as a helper function for PopulateStickies.py
@@ -15,11 +14,11 @@ colorFeatureMap = {}
 def read_input():
     parser = argparse.ArgumentParser()
     parser.add_argument("wiki_files_directory",
-                        help="Directory (folder) whose wiki files you want to convert to stickies")
+                        help="C:\\Users\\stuar\\Desktop\\Trixie\\Trixie-1.2-0-master\\Docs1")
     wiki_files_directory = parser.parse_args().wiki_files_directory
 
     storyList = []
-
+    # Have to pass the encoding format here when opening the file, this avoids a decode byte error. (,encoding="utf-8")
     for filename in os.listdir(wiki_files_directory):
         file = open(wiki_files_directory + "/" + filename)
         lines = file.readlines()
@@ -40,12 +39,12 @@ def random_color():
 
 def get_story_list(lines):
     feature = lines[0].rstrip()
-    projectColor = colorRange_Instance(100, matplotlib.colors.y)  # This was changed from randomColor() to
+    projectColor = colorRange_Instance(100, "#FFFF00")  # This was changed from randomColor() to
     # colorRange_Instance
 
     # Make sure color is not a repeat from a different project
     while projectColor in colorFeatureMap:
-        projectColor = colorRange_Instance(100, matplotlib.colors.y)  # This was changed from randomColor() to
+        projectColor = colorRange_Instance(100, "#FFFF00")  # This was changed from randomColor() to
         # colorRangeInstance() to
         # reflect feature update
 
