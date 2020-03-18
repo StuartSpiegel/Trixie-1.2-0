@@ -2,9 +2,11 @@ import argparse
 import os
 import random
 
+# Keep track of used colors
+from Saturation import getLightColor
+
 # CommonUtils.py acts as a helper function for PopulateStickies.py
 
-# Keep track of used colors
 colorFeatureMap = {}
 
 
@@ -68,13 +70,13 @@ def lighter(percent):
 
 def get_story_list(lines):
     feature = lines[0].rstrip()
-    projectColor = lighten_color(random_color(), amount=0.5)  # This was changed from randomColor() to
-    # lighter_color
+    projectColor = getLightColor()  # This was changed from randomColor() to
+    # getLightColor()
 
     # Make sure color is not a repeat from a different project
     while projectColor in colorFeatureMap:
-        projectColor = lighten_color(random_color(), amount=0.5)  # This was changed from randomColor() to
-        # lighter_color
+        projectColor = getLightColor()  # This was changed from randomColor() to
+        # getLightColor()
 
     colorFeatureMap[projectColor] = feature
 
