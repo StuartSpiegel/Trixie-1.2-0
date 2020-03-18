@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33561dde-8a03-4115-95ed-cf5a3768cb21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommonUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateStickies.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateStickies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/colorRange.py" beforeDir="false" afterPath="$PROJECT_DIR$/colorRange.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +59,21 @@
       <option name="presentableId" value="Default" />
       <updated>1584459410831</updated>
     </task>
+    <task id="LOCAL-00001" summary="-update to ColorRange &#10;-updated lighten method&#10;-CreateStickies type error">
+      <created>1584554582601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584554582601</updated>
+    </task>
+    <task id="LOCAL-00002" summary="-update to ColorRange &#10;-updated lighten method&#10;-CreateStickies type error">
+      <created>1584554664760</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584554664760</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,6 +89,13 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="-update to ColorRange &#10;-updated lighten method&#10;-CreateStickies type error" />
+    <option name="LAST_COMMIT_MESSAGE" value="-update to ColorRange &#10;-updated lighten method&#10;-CreateStickies type error" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Vim_Emulation" timestamp="1584550940392">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -91,10 +109,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584462289410" />
-    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1584554632658">
+    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1584554664145">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584554632658" />
+    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584554664145" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1584548858588">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -103,22 +121,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584548502112" />
-    <state width="1899" height="335" key="GridCell.Tab.0.bottom" timestamp="1584468365761">
+    <state width="1899" height="335" key="GridCell.Tab.0.bottom" timestamp="1584554788135">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584468365761" />
-    <state width="1899" height="335" key="GridCell.Tab.0.center" timestamp="1584468365761">
+    <state width="1899" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584554788135" />
+    <state width="1899" height="335" key="GridCell.Tab.0.center" timestamp="1584554788135">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="335" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584468365761" />
-    <state width="1899" height="335" key="GridCell.Tab.0.left" timestamp="1584468365761">
+    <state width="1899" height="335" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584554788135" />
+    <state width="1899" height="335" key="GridCell.Tab.0.left" timestamp="1584554788135">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="335" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584468365761" />
-    <state width="1899" height="335" key="GridCell.Tab.0.right" timestamp="1584468365761">
+    <state width="1899" height="335" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584554788134" />
+    <state width="1899" height="335" key="GridCell.Tab.0.right" timestamp="1584554788135">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="335" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584468365761" />
+    <state width="1899" height="335" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584554788135" />
     <state x="503" y="151" key="SettingsEditor" timestamp="1584548510247">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
