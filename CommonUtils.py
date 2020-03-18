@@ -1,7 +1,6 @@
 import argparse
 import os
 import random
-from colorRange import colorRange_Instance
 
 # CommonUtils.py acts as a helper function for PopulateStickies.py
 
@@ -27,8 +26,27 @@ def read_input():
     return storyList, colorFeatureMap
 
 
-# Inspired by https://stackoverflow.com/questions/28999287/generate-random-colors-rgb
+def lighten_color(color, amount=0.5):
+    """
+    Lightens the given color by multiplying (1-luminosity) by the given amount.
+    Input can be matplotlib color string, hex string, or RGB tuple.
 
+    Examples:
+    >> lighten_color('g', 0.3)
+    >> lighten_color('#F034A3', 0.6)
+    >> lighten_color((.3,.55,.1), 0.5)
+    """
+    import matplotlib.colors as mc
+    import colorsys
+    try:
+        c = mc.cnames[color]
+    except:
+        c = color
+    c = colorsys.rgb_to_hls(*mc.to_rgb(c))
+    return colorsys.hls_to_rgb(c[0], max(0, min(1, amount * c[1])), c[2])
+
+
+# Inspired by https://stackoverflow.com/questions/28999287/generate-random-colors-rgb
 def random_color():
     # TODO: Should we avoid choosing dark colors which obscure the text?
     red = random.randint(0, 255)
@@ -37,16 +55,26 @@ def random_color():
     return "%02x%02x%02x" % (red, green, blue)
 
 
+# A Percentage of 0.0% will return the same color and 1.0 will return white
+# Everything in between will be a lighter shade of the same HUE. Imagine moving along a line between your selected
+# color and the pure white on an HSB model.
+# color is the base color selector to choose between white.
+def lighter(percent):
+    color = random_color()
+    white = (255, 255, 255)
+    vector = white - color
+    return color + vector * percent
+
+
 def get_story_list(lines):
     feature = lines[0].rstrip()
-    projectColor = colorRange_Instance(100, "#FFFF00")  # This was changed from randomColor() to
-    # colorRange_Instance
+    projectColor = lighten_color(random_color(), amount=0.5)  # This was changed from randomColor() to
+    # lighter_color
 
     # Make sure color is not a repeat from a different project
     while projectColor in colorFeatureMap:
-        projectColor = colorRange_Instance(100, "#FFFF00")  # This was changed from randomColor() to
-        # colorRangeInstance() to
-        # reflect feature update
+        projectColor = lighten_color(random_color(), amount=0.5)  # This was changed from randomColor() to
+        # lighter_color
 
     colorFeatureMap[projectColor] = feature
 

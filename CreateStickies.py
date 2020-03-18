@@ -1,7 +1,8 @@
 import os
-from docx import Document
+
 from CommonUtils import read_input
 from PopulateStickies import populate_title, populate_color, populate_text, populate_points
+from docx import Document
 
 STICKY_TEMPLATE_NAME = "Stickie_template.docx"
 
@@ -71,3 +72,4 @@ storyList, colorFeatureMap = read_input()
 # print_stories()
 create_stickies(storyList)
 create_color_key(colorFeatureMap)
+
