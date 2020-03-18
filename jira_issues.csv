@@ -1,0 +1,53 @@
+Issue Type,Summary,Epic Name,Epic Link,Description,Story Points
+Epic,Epic for feature number TWSSAFE-001,TWSSAFE-001,,,
+Epic,Epic for feature number TWSSAFE-002,TWSSAFE-002,,,
+Story,Research ,,TWSSAFE-001,Research different word document manipulation python libraries ,8
+Story,Research ,,8,"Research different word document manipulation python libraries 
+ * 8",TWSSAFE-001
+Story,Software Design & Development ,,TWSSAFE-001,Extract data from wiki format ,0
+Story,Software Design & Development ,,0,"Extract data from wiki format 
+ * 0",TWSSAFE-001
+Story,Software Design & Development ,,TWSSAFE-001,"Populate stickie box title with the feature number 
+ * The box title color should change per feature!
+ * Another bullet added for test",2
+Story,Software Design & Development ,,2,"Populate stickie box title with the feature number 
+ * The box title color should change per feature!
+ * Another bullet added for test
+ * 2",TWSSAFE-001
+Story,Software Design & Development ,,TWSSAFE-001,Populate each stickie box with the story category ,1
+Story,Software Design & Development ,,1,"Populate each stickie box with the story category 
+ * 1",TWSSAFE-001
+Story,Software Design & Development ,,TWSSAFE-001,Populate each stickie box with each story title ,3
+Story,Software Design & Development ,,3,"Populate each stickie box with each story title 
+ * 3",TWSSAFE-001
+Story,Software Design & Development ,,TWSSAFE-001,Populate each stickie box with the correct story points ,5
+Story,Software Design & Development ,,5,"Populate each stickie box with the correct story points 
+ * 5",TWSSAFE-001
+Story,Testing ,,TWSSAFE-001,Develop Unit Test for Trixie Stickies ,1
+Story,Testing ,,1,"Develop Unit Test for Trixie Stickies 
+ * 1",TWSSAFE-001
+Story,Research ,,TWSSAFE-002,Research different word document manipulation python libraries ,8
+Story,Research ,,8,"Research different word document manipulation python libraries 
+ * 8",TWSSAFE-002
+Story,Software Design & Development ,,TWSSAFE-002,Extract data from wiki format ,0
+Story,Software Design & Development ,,0,"Extract data from wiki format 
+ * 0",TWSSAFE-002
+Story,Software Design & Development ,,TWSSAFE-002,"Populate stickie box title with the feature number 
+ * The box title color should change per feature! (1)
+ * Another bullet added for test (1)",2
+Story,Software Design & Development ,,2,"Populate stickie box title with the feature number 
+ * The box title color should change per feature! (1)
+ * Another bullet added for test (1)
+ * 2",TWSSAFE-002
+Story,Software Design & Development ,,TWSSAFE-002,Populate each Trixie box with the story category ,1
+Story,Software Design & Development ,,1,"Populate each Trixie box with the story category 
+ * 1",TWSSAFE-002
+Story,Software Design & Development ,,TWSSAFE-002,Populate each Trixie box with each story title ,3
+Story,Software Design & Development ,,3,"Populate each Trixie box with each story title 
+ * 3",TWSSAFE-002
+Story,Software Design & Development ,,TWSSAFE-002,Populate each Trixie box with the correct story points ,5
+Story,Software Design & Development ,,5,"Populate each Trixie box with the correct story points 
+ * 5",TWSSAFE-002
+Story,Testing ,,TWSSAFE-002,Develop Unit Test for Trixie Stickies ,1
+Story,Testing ,,1,"Develop Unit Test for Trixie Stickies 
+ * 1",TWSSAFE-002

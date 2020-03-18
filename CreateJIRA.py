@@ -1,4 +1,5 @@
 import csv
+
 from CommonUtils import read_input
 
 issueList, _ = read_input()
@@ -29,6 +30,6 @@ with open('jira_issues.csv', 'w') as file:
         # allow multi-line comment in JIRA
 
         # A generalized procedure for adding multi-line descriptions in JIRA
-        while len(issueList) > 0:
-            description += "\n * " + "\n * ".join(issue[issue])
-            writer.writerow(["Story", issue[issue], "", issue[issue], description, issue[issue]])
+    # while len(issueList) > 0:
+    #    description += "\n * " + "\n * ".join(issue[issue])
+    #   writer.writerow(["Story", issue[issue], "", issue[issue], description, issue[issue]])
