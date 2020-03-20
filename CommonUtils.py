@@ -19,7 +19,8 @@ def read_input():
     wiki_files_directory = parser.parse_args().wiki_files_directory
 
     storyList = []
-    # Have to pass the encoding format here when opening the file, this avoids a decode byte error. (,encoding="utf-8")
+    # Might Have to pass the encoding format here when opening the file, this avoids a decode byte error. (,
+    # encoding="utf-8")
     for filename in os.listdir(wiki_files_directory):
         file = open(wiki_files_directory + "/" + filename)
         lines = file.readlines()
@@ -87,21 +88,37 @@ def get_story_list(lines):
             startIndex = i + 1
             break
 
+    # local variables
     storyList = []
     storyCategory = ""
+    acceptanceCriteria = ""
+    assumptions = ""
+    testing = ""
     for line in lines[startIndex: len(lines)]:
         if line.startswith("==="):
             stripAfter = line.find("(")
             storyCategory = line[3:stripAfter]
+            # Parsing for testing bullet
+            stripAfter = line.rfind("Testing")
+            testing = line[2:stripAfter]
+            # Parsing for assumptions
+            stripAfter = line.find("Assumptions")
+            assumptions = line[2:stripAfter]
+        # Acceptance Criteria Parsing
+        elif line.startswith("=="):
+            stripAfter = line.find("Acceptance Criteria")
+            acceptanceCriteria = line[2:stripAfter]
+            storyCategory = line[3:stripAfter]
+        # Story Point Parsing (bullets)
         elif line.startswith("* "):
             stripAfter = line.rfind("(")
             storyDescription = line[2:stripAfter]
             storySize = line[stripAfter + 1: line.rfind(")")]
-            storyInfo = (storyCategory, storyDescription, [], storySize, feature, projectColor)
+            storyInfo = (
+                storyCategory, storyDescription, [], storySize, feature, projectColor, acceptanceCriteria, assumptions,
+                testing)
+            # Add the parsed storyInfo to the storyList to populate the DocX
             storyList.append(storyInfo)
         elif line.startswith("**") and storyInfo:
             storyInfo[2].append(line[3:].rstrip())
-        elif line.startswith("-") and storyInfo:  # The "-" sentinel value will serve as the parse indicator for
-            # Acceptance Criteria
-            storyInfo[3].append(line[4].rstrip())
     return storyList

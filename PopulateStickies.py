@@ -1,5 +1,6 @@
-from lxml import etree
 import lines
+from lxml import etree
+
 w = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 v = "{urn:schemas-microsoft-com:vml}"
 a = "{http://schemas.openxmlformats.org/drawingml/2006/main}"
@@ -127,8 +128,12 @@ def populate_text(run, storyCategory, storyDescription, storyBullets):
             txbx.insert(-1, bullet)
 
 
-# TODO: Define a method that addresses cases of sub-bullets in stories: (Case1: Main bullet is general statement,
-#  each sub is its own story) (Case2: main bullet is story and sub bullets are description)
+# ----------------------------------------------------------------------------------------------------------------------#
+
+# REDEFINE Below methods to add parsed fields correctly to the Stickies (Parsed fields: Assumptions, acceptance
+# Criteria etc) TODO: Define a method that addresses cases of sub-bullets in stories: (Case1: Main bullet is general
+#  statement, each sub is its own story) (Case2: main bullet is story and sub bullets are description)
+# TODO: **Depending on formatting possibly just modify populate text to accept the added fields **
 def populate_text_General_statement(run, storyCategory, storyBullets):
     for txbx in run.iter(w + "txbxContent"):
         # Add story category to first existing paragraph
@@ -183,7 +188,7 @@ def populate_text_General_statement(run, storyCategory, storyBullets):
                 txbx.insert(-1, bullet)
 
 
-def populate_text_acceptanceCrtieria(run, storyCategory, storyDescription, storyBullets, acceptanceCriteria):
+def populate_text_acceptanceCriteria(run, storyCategory, storyDescription, storyBullets, acceptanceCriteria):
     for txbx in run.iter(w + "txbxContent"):  # Get first available Paragraph
         # Add story category to first existing paragraph
         for subParagraph in txbx.iter(w + "p"):
