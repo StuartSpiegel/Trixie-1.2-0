@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33561dde-8a03-4115-95ed-cf5a3768cb21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/textProcessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateStickies.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateStickies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs1/Wiki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Docs1/Wiki.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PopulateStickies.py" beforeDir="false" afterPath="$PROJECT_DIR$/PopulateStickies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jira_issues.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jira_issues.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/color_key1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/color_key1.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies1.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies2.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies3.docx" afterDir="false" />
-    </list>
+    <list default="true" id="33561dde-8a03-4115-95ed-cf5a3768cb21" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584731044760</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-Create Stickies and JIRA are working&#10;-Color is working&#10;-acceptance Criteria working with tests&#10;-Working on additional features -- possibly read directly from wiki">
+      <created>1584977915768</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584977915768</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,7 +131,8 @@
     <MESSAGE value="-Created a lightenColor() method with new approach&#10;-Changed the assignments" />
     <MESSAGE value="-CreateStickies.py working with brightColors&#10;-CreateJIRA.py Multi-line comments&#10;-CreateJIRA.py EPIC.type &#10;-Formatting for accceptance Criteria &#10;-JIRA issues --&gt; .csv&#10;-ADD Stickies.docx" />
     <MESSAGE value="-CreateStickies.py is currently broken as I finish up the final method. All features working accept adding the new parsed fields (acceptanceCrtieria, assumptions, etc) to the Sticky with the correct formatting. Editing the method: Populate_text() --&gt; or define a new method to handle" />
-    <option name="LAST_COMMIT_MESSAGE" value="-CreateStickies.py is currently broken as I finish up the final method. All features working accept adding the new parsed fields (acceptanceCrtieria, assumptions, etc) to the Sticky with the correct formatting. Editing the method: Populate_text() --&gt; or define a new method to handle" />
+    <MESSAGE value="-Create Stickies and JIRA are working&#10;-Color is working&#10;-acceptance Criteria working with tests&#10;-Working on additional features -- possibly read directly from wiki" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Create Stickies and JIRA are working&#10;-Color is working&#10;-acceptance Criteria working with tests&#10;-Working on additional features -- possibly read directly from wiki" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -152,10 +149,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584462289410" />
-    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1584731041864">
+    <state x="0" y="114" key="CommitChangelistDialog2" timestamp="1584977913539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584731041864" />
+    <state x="0" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584977913539" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1584548858588">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
