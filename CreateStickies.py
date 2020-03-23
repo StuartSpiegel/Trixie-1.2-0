@@ -1,8 +1,7 @@
 import os
 
 from CommonUtils import read_input
-from PopulateStickies import populate_title, populate_color, populate_text, populate_points, \
-    populate_text_General_statement, populate_text_acceptanceCriteria
+from PopulateStickies import populate_title, populate_color, populate_text, populate_points
 from docx import Document
 
 STICKY_TEMPLATE_NAME = "Stickie_template.docx"
@@ -38,14 +37,12 @@ def create_stickies(storyList):
         paragraph, text_run, corner, title_run, color_run = switcher.get(i % 6)
         populate_title(story[4], document.paragraphs[0]._p.r_lst[title_run])
         populate_color(document.paragraphs[0]._p.r_lst[color_run], story[5])
-        populate_text(document.paragraphs[paragraph]._p.r_lst[text_run], story[0], story[1], story[2])
+        populate_text(document.paragraphs[paragraph]._p.r_lst[text_run], story[0], story[1], story[2], story[3])
         populate_points(story[3], document.paragraphs[0]._p.r_lst[corner])
 
         # Call my new methods of PopulateStickies here WITH the acceptanceCriteria, Assumptions, Testings bullets etc
         # TODO: Change the Array indices of storyList to reflect the correct index of the parsed String
-        populate_text_General_statement(document.paragraphs[paragraph]._p.r_lst[text_run], story[0], story[2])
-        populate_text_acceptanceCriteria(document.paragraphs[paragraph]._p.r_lst[text_run], story[0], story[1],
-                                         story[2], story[3])
+        # Deleted method calls here to method defined in textProcessing.py as alternative textProcessing.
 
         # Save a new file after making 6 sticky notes (or at the end)
         if i % 6 == 5 or i == len(storyList) - 1:
