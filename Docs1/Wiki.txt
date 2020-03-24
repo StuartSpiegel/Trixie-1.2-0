@@ -4,7 +4,11 @@ This is [[SAFe Planning#Program_Increment_4| PI-4]] feature.
 
 ==Acceptance Criteria==
 * Stickie Template Word Document will be populated from wiki data
-== Considerations ==
+* Acceptance Criteria 1
+* Acceptance Crtieria 2
+** Test 1
+** Test 2
+==Considerations ==
 ===Assumptions===
 * Wiki data has already been downloaded to hosting machine
 

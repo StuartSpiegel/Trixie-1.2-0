@@ -28,8 +28,3 @@ with open('jira_issues.csv', 'w') as file:
             description += "\n * " + "\n * ".join(issue[3])
         writer.writerow(["Story", issue[0], "", issue[-3], description, issue[4]])  # Continue the append of issues to
         # allow multi-line comment in JIRA
-
-        # A generalized procedure for adding multi-line descriptions in JIRA
-    # while len(issueList) > 0:
-    #    description += "\n * " + "\n * ".join(issue[issue])
-    #   writer.writerow(["Story", issue[issue], "", issue[issue], description, issue[issue]])

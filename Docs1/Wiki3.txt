@@ -3,17 +3,29 @@ TWSSAFE-003
 This is [[SAFe Planning#Program_Increment_4| PI-4]] feature.
 
 ==Acceptance Criteria==
-* test 
+* Stickie Template Word Document will be populated from wiki data
 == Considerations ==
 ===Assumptions===
-* Wiki Data downloaded to hosting machine
+* Wiki data has already been downloaded to hosting machine
 
 ===Dependencies===
 
 
 ==Stories (16)==
-* Test
-* testing
+===Research (2)===
+* Research different word document manipulation python libraries (8)
 
-===Testing (1)===
-* Test 
+===Software Design & Development (13)===
+* Extract data from wiki format (0)
+* Populate stickie box title with the feature number (2)
+** The box title color should change per feature!
+** Another bullet added for test
+* Populate each stickie box with the story category (1)
+* Populate each stickie box with each story title (3)
+* Populate each stickie box with the correct story points (5)
+
+=== Testing ===
+* Develop Unit Test for Trixie Stickies (1)
+
+===Testing===
+* Test

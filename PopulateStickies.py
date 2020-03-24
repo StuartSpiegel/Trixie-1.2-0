@@ -97,7 +97,7 @@ def populate_text(run, storyCategory, storyDescription, storyBullets, acceptance
         acceptanceText.text = acceptanceCriteria
         newRun.insert(1, acceptanceText)  # added
         content.insert(0, newRun)
-        txbx.insert(1, content)
+        txbx.insert(1, content)  # -Flag
 
         # If there are bullets, add new paragraphs for them (add story point bullets)
         for i, bulletText in zip(range(len(storyBullets)), storyBullets):
@@ -134,6 +134,5 @@ def populate_text(run, storyCategory, storyDescription, storyBullets, acceptance
             newRun.insert(1, newText)
             bullet.insert(1, newRun)
             txbx.insert(-1, bullet)
-
 
 # ----------------------------------------------------------------------------------------------------------------------#

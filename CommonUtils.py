@@ -69,6 +69,8 @@ def lighter(percent):
     return color + vector * percent
 
 
+# The pre-String "===" Indicates a field category that has its own sub-fields
+# The pre-String "==" Indicates a field a static field
 def get_story_list(lines):
     feature = lines[0].rstrip()
     projectColor = getLightColor()  # This was changed from randomColor() to
@@ -81,19 +83,51 @@ def get_story_list(lines):
 
     colorFeatureMap[projectColor] = feature
 
-    # Parse stories from text file
-    startIndex = 0
-    for i in range(len(lines)):
-        if "==Stories" in lines[i]:
-            startIndex = i + 1
-            break
-
     # local variables
     storyList = []
     storyCategory = ""
     acceptanceCriteria = ""
     assumptions = ""
     testing = ""
+    considerations = ""
+
+    # Parse Acceptance Criteria and Considerations from text file
+    startIndex = 0
+    for k in range(len(lines)):
+        if "==Acceptance " or "==Considerations" in lines[k]:
+            startIndex = k + 1
+            break
+
+    for line in lines[startIndex: len(lines)]:
+        if line.startswith("=="):
+            stripAfter = line.find("Acceptance Criteria")
+            acceptanceCriteria = line[2:stripAfter]
+            storyCategory = line[3:stripAfter]
+        elif line.startswith("=="):
+            stripAfter = line.find("Considerations")
+            considerations = line[2:stripAfter]
+            storyCategory = line[3:stripAfter]
+        # If the line starts with "* " it must be a Sub point (sub-field) of the original field
+        elif line.startswith("* "):
+            stripAfter = line.rfind("(")
+            storyDescription = line[2:stripAfter]
+            storySize = line[stripAfter + 1: line.rfind(")")]
+            storyInfo = (
+                storyCategory, storyDescription, [], storySize, feature, projectColor, acceptanceCriteria, assumptions,
+                testing, considerations)
+            # Add the parsed storyInfo to the storyList to populate the DocX
+            storyList.append(storyInfo)
+        elif line.startswith("**") and storyInfo:
+            storyInfo[2].append(line[3:].rstrip())
+
+    # Parse stories from text file
+    startIndex = 0
+    for i in range(len(lines)):
+        # Set the start index for parsing
+        if "==Stories" or "===Assumptions" or "===Dependencies" or "===Testing" in lines[i]:
+            startIndex = i + 1
+            break
+
     for line in lines[startIndex: len(lines)]:
         if line.startswith("==="):
             stripAfter = line.find("(")

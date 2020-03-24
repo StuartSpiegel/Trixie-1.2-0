@@ -15,7 +15,7 @@ This is [[SAFe Planning#Program_Increment_4| PI-4]] feature.
 ===Research (2)===
 * Research different word document manipulation python libraries (8)
 
-===Software Design & Development (8)===
+===Software Design & Development (8) ===
 * Extract data from wiki format (0)
 * Populate stickie box title with the feature number (2)
 ** The box title color should change per feature! (1)
@@ -25,4 +25,4 @@ This is [[SAFe Planning#Program_Increment_4| PI-4]] feature.
 * Populate each Trixie box with the correct story points (5)
 
 ===Testing (1)===
-* Develop Unit Test for Trixie Stickies (1)
+* Develop Unit Test for Trixie Stickies 
