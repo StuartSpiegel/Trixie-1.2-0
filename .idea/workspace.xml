@@ -3,19 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="33561dde-8a03-4115-95ed-cf5a3768cb21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommonUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateJIRA.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateJIRA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs1/Wiki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Docs1/Wiki.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs1/Wiki2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Docs1/Wiki2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs1/Wiki3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Docs1/Wiki3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs1/Wiki4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Docs1/Wiki4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PopulateStickies.py" beforeDir="false" afterPath="$PROJECT_DIR$/PopulateStickies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jira_issues.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jira_issues.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/color_key1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/color_key1.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies1.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies10.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies10.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies11.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies11.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies12.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies12.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies13.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies13.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies14.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies14.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies15.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies15.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies2.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies3.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies4.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies4.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies5.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies5.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies6.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies6.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies7.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies7.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies8.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies8.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies9.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies9.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584977915768</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="-Create Stickies and JIRA are working&#10;-Color is working&#10;-All field parsing works &#10;-Still some bugs with CreateJIRA.py regrading parsing field into JIRA&#10;-bug fixes">
+      <created>1585069553872</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585069553872</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,7 +158,8 @@
     <MESSAGE value="-CreateStickies.py working with brightColors&#10;-CreateJIRA.py Multi-line comments&#10;-CreateJIRA.py EPIC.type &#10;-Formatting for accceptance Criteria &#10;-JIRA issues --&gt; .csv&#10;-ADD Stickies.docx" />
     <MESSAGE value="-CreateStickies.py is currently broken as I finish up the final method. All features working accept adding the new parsed fields (acceptanceCrtieria, assumptions, etc) to the Sticky with the correct formatting. Editing the method: Populate_text() --&gt; or define a new method to handle" />
     <MESSAGE value="-Create Stickies and JIRA are working&#10;-Color is working&#10;-acceptance Criteria working with tests&#10;-Working on additional features -- possibly read directly from wiki" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Create Stickies and JIRA are working&#10;-Color is working&#10;-acceptance Criteria working with tests&#10;-Working on additional features -- possibly read directly from wiki" />
+    <MESSAGE value="-Create Stickies and JIRA are working&#10;-Color is working&#10;-All field parsing works &#10;-Still some bugs with CreateJIRA.py regrading parsing field into JIRA&#10;-bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Create Stickies and JIRA are working&#10;-Color is working&#10;-All field parsing works &#10;-Still some bugs with CreateJIRA.py regrading parsing field into JIRA&#10;-bug fixes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
