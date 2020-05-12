@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="33561dde-8a03-4115-95ed-cf5a3768cb21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommonUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateJIRA.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateJIRA.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jira_issues.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jira_issues.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/color_key1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/color_key1.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies1.docx" afterDir="false" />

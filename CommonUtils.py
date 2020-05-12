@@ -2,11 +2,10 @@ import argparse
 import os
 import random
 
-# Keep track of used colors
+# CommonUtils.py acts as a helper function for PopulateStickies.py
 from Saturation import getLightColor
 
-# CommonUtils.py acts as a helper function for PopulateStickies.py
-
+# Keep track of used colors
 colorFeatureMap = {}
 
 
@@ -69,8 +68,6 @@ def lighter(percent):
     return color + vector * percent
 
 
-# The pre-String "===" Indicates a field category that has its own sub-fields
-# The pre-String "==" Indicates a field a static field
 def get_story_list(lines):
     feature = lines[0].rstrip()
     projectColor = getLightColor()  # This was changed from randomColor() to
@@ -87,72 +84,51 @@ def get_story_list(lines):
     storyList = []
     storyCategory = ""
     acceptanceCriteria = ""
-    assumptions = ""
     testing = ""
     considerations = ""
 
     # Parse Acceptance Criteria and Considerations from text file
     startIndex = 0
     for k in range(len(lines)):
-        if "==Acceptance " or "==Considerations" in lines[k]:
+        if "==Acceptance" or "==Considerations" or "==Stories" in lines[k]:
             startIndex = k + 1
             break
 
-    for line in lines[startIndex: len(lines)]:
-        if line.startswith("=="):
-            stripAfter = line.find("Acceptance Criteria")
-            acceptanceCriteria = line[2:stripAfter]
-            storyCategory = line[3:stripAfter]
-        elif line.startswith("=="):
-            stripAfter = line.find("Considerations")
-            considerations = line[2:stripAfter]
-            storyCategory = line[3:stripAfter]
-        # If the line starts with "* " it must be a Sub point (sub-field) of the original field
-        elif line.startswith("* "):
-            stripAfter = line.rfind("(")
-            storyDescription = line[2:stripAfter]
-            storySize = line[stripAfter + 1: line.rfind(")")]
-            storyInfo = (
-                storyCategory, storyDescription, [], storySize, feature, projectColor, acceptanceCriteria, assumptions,
-                testing, considerations)
-            # Add the parsed storyInfo to the storyList to populate the DocX
-            storyList.append(storyInfo)
-        elif line.startswith("**") and storyInfo:
-            storyInfo[2].append(line[3:].rstrip())
-
-    # Parse stories from text file
-    startIndex = 0
-    for i in range(len(lines)):
-        # Set the start index for parsing
-        if "==Stories" or "===Assumptions" or "===Dependencies" or "===Testing" in lines[i]:
-            startIndex = i + 1
-            break
-
+    # In the range of line[0 to lines.length]
     for line in lines[startIndex: len(lines)]:
         if line.startswith("==="):
             stripAfter = line.find("(")
+            # Get the storyCategory
             storyCategory = line[3:stripAfter]
-            # Parsing for testing bullet
-            stripAfter = line.rfind("Testing")
-            testing = line[2:stripAfter]
-            # Parsing for assumptions
-            stripAfter = line.find("Assumptions")
-            assumptions = line[2:stripAfter]
-        # Acceptance Criteria Parsing
+            # Get the testing field
+            stripAfter = line.find("Testing")
+            testing = line[7:stripAfter]
+        # clause looking for values that only have the sentinel value of "=="
         elif line.startswith("=="):
             stripAfter = line.find("Acceptance Criteria")
-            acceptanceCriteria = line[2:stripAfter]
-            storyCategory = line[3:stripAfter]
-        # Story Point Parsing (bullets)
+            # Get the acceptance criteria
+            acceptanceCriteria = line[19:stripAfter]
+            # Get the considerations field
+            stripAfter = line.find("Considerations")
+            considerations = line[13:stripAfter]
+
+        # clause looking for asterisk indicating story descriptors (bullets)
         elif line.startswith("* "):
             stripAfter = line.rfind("(")
             storyDescription = line[2:stripAfter]
+            # Get the storySize by calculating from last parse point to closing brace
             storySize = line[stripAfter + 1: line.rfind(")")]
+
+            # pack collected data into the storyInfo array to be appended to storyList for use by functions
             storyInfo = (
-                storyCategory, storyDescription, [], storySize, feature, projectColor, acceptanceCriteria, assumptions,
-                testing)
+                storyCategory, storyDescription, [], storySize, feature, projectColor, acceptanceCriteria,
+                testing, considerations)
             # Add the parsed storyInfo to the storyList to populate the DocX
             storyList.append(storyInfo)
+            # clause is looking for double asterisk indicating that story Info is following, append to storyInfo
         elif line.startswith("**") and storyInfo:
             storyInfo[2].append(line[3:].rstrip())
+            # The "-" will be the sentinel for acceptance criteria
+        elif line.startswith("-") and storyInfo:
+            storyInfo[3].append(line[4].rstrip())
     return storyList
