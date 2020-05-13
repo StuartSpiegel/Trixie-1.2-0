@@ -1,33 +1,34 @@
-Issue Type,Summary,Epic Name,Epic Link,Description,Story Points
-Epic,Epic for feature number ,,,,
-Epic,Epic for feature number ware Design & Development (13)===,ware Design & Development (13)===,,,
-Epic,Epic for feature number mptions===,mptions===,,,
-Epic,Epic for feature number arch (2)===,arch (2)===,,,
-Epic,Epic for feature number ware Design & Development (8) ===,ware Design & Development (8) ===,,,
+Issue Type,Summary,Epic Name,Epic Link,Description,Story Points,Acceptance Criteria,Considerations,testing
+Epic,Epic for feature number ,,,,,,,
+Epic,Epic for feature number ==Assumptions===,==Assumptions===,,,,,,
+Epic,Epic for feature number ==Software Design & Development (8) ===,==Software Design & Development (8) ===,,,,,,
+Epic,Epic for feature number ==Software Design & Development (13)===,==Software Design & Development (13)===,,,,,,
+Epic,Epic for feature number ==Research (2)===,==Research (2)===,,,,,,
+Epic,Epic for feature number ==,==,,,,,,
 Story,,,,Stickie Template Word Document will be populated from wiki data,* Stickie Template Word Document will be populated from wiki data
 Story,,,,Acceptance Criteria 1,* Acceptance Criteria 1
 Story,,,,"Acceptance Crtieria 2
  * Test 1
  * Test 2",* Acceptance Crtieria 2
-Story,Assumptions===,,mptions===,Wiki data has already been downloaded to hosting machine,* Wiki data has already been downloaded to hosting machine
-Story,Research ,,arch (2)===,Research different word document manipulation python libraries ,8
-Story,Software Design & Development ,,ware Design & Development (13)===,Extract data from wiki format ,0
-Story,Software Design & Development ,,ware Design & Development (13)===,"Populate stickie box title with the feature number 
+Story,Assumptions===,,==Assumptions===,Wiki data has already been downloaded to hosting machine,* Wiki data has already been downloaded to hosting machine
+Story,Research ,,==Research (2)===,Research different word document manipulation python libraries ,8
+Story,Software Design & Development ,,==Software Design & Development (13)===,Extract data from wiki format ,0
+Story,Software Design & Development ,,==Software Design & Development (13)===,"Populate stickie box title with the feature number 
  * The box title color should change per feature!
  * Another bullet added for test",2
-Story,Software Design & Development ,,ware Design & Development (13)===,Populate each stickie box with the story category ,1
-Story,Software Design & Development ,,ware Design & Development (13)===,Populate each stickie box with each story title ,3
-Story,Software Design & Development ,,ware Design & Development (13)===,Populate each stickie box with the correct story points ,5
-Story,Testing ,,,Develop Unit Test for Trixie Stickies ,1
-Story,Testing ,,,Test,* Test
+Story,Software Design & Development ,,==Software Design & Development (13)===,Populate each stickie box with the story category ,1
+Story,Software Design & Development ,,==Software Design & Development (13)===,Populate each stickie box with each story title ,3
+Story,Software Design & Development ,,==Software Design & Development (13)===,Populate each stickie box with the correct story points ,5
+Story,Testing ,,==,Develop Unit Test for Trixie Stickies ,1
+Story,Testing ,,==,Test,* Test
 Story,,,,Stickie Template Word Document will be populated from wiki data,* Stickie Template Word Document will be populated from wiki data
-Story,Assumptions===,,mptions===,Wiki data has already been downloaded to hosting machine,* Wiki data has already been downloaded to hosting machine
-Story,Research ,,arch (2)===,Research different word document manipulation python libraries ,8
-Story,Software Design & Development ,,ware Design & Development (8) ===,Extract data from wiki format ,0
-Story,Software Design & Development ,,ware Design & Development (8) ===,"Populate stickie box title with the feature number 
+Story,Assumptions===,,==Assumptions===,Wiki data has already been downloaded to hosting machine,* Wiki data has already been downloaded to hosting machine
+Story,Research ,,==Research (2)===,Research different word document manipulation python libraries ,8
+Story,Software Design & Development ,,==Software Design & Development (8) ===,Extract data from wiki format ,0
+Story,Software Design & Development ,,==Software Design & Development (8) ===,"Populate stickie box title with the feature number 
  * The box title color should change per feature! (1)
  * Another bullet added for test (1)",2
-Story,Software Design & Development ,,ware Design & Development (8) ===,Populate each Trixie box with the story category ,1
-Story,Software Design & Development ,,ware Design & Development (8) ===,Populate each Trixie box with each story title ,3
-Story,Software Design & Development ,,ware Design & Development (8) ===,Populate each Trixie box with the correct story points ,5
-Story,Testing ,,,Develop Unit Test for Trixie Stickies ,* Develop Unit Test for Trixie Stickies 
+Story,Software Design & Development ,,==Software Design & Development (8) ===,Populate each Trixie box with the story category ,1
+Story,Software Design & Development ,,==Software Design & Development (8) ===,Populate each Trixie box with each story title ,3
+Story,Software Design & Development ,,==Software Design & Development (8) ===,Populate each Trixie box with the correct story points ,5
+Story,Testing ,,==,Develop Unit Test for Trixie Stickies ,* Develop Unit Test for Trixie Stickies 

@@ -9,16 +9,17 @@ for issue in issueList:
     features.append(issue[-2])
 
 features = list(set(features))
-
+# Added the fields: acceptance criteria, considerations, and a testing flag to the JIRA writer
 with open('jira_issues.csv', 'w') as file:
     writer = csv.writer(file)
-    writer.writerow(["Issue Type", "Summary", "Epic Name", "Epic Link", "Description", "Story Points"])
+    writer.writerow(
+        ["Issue Type", "Summary", "Epic Name", "Epic Link", "Description", "Story Points", "Acceptance Criteria",
+         "Considerations", "testing"])
     for feature in features:
-        writer.writerow(["Epic", "Epic for feature number " + feature, feature, "", "", ""])
+        writer.writerow(["Epic", "Epic for feature number " + feature, feature, "", "", "", "", "", ""])
     for issue in issueList:
         description = issue[1]
 
-        # Add bullet points
         # \\\\ is necessary to create multi-line description in JIRA
         if len(issue[2]) > 0:
             description += "\n * " + "\n * ".join(issue[2])

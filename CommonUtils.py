@@ -102,17 +102,17 @@ def get_story_list(lines):
             storyCategory = line[3:stripAfter]
             # Get the testing field
             stripAfter = line.find("Testing")
-            testing = line[7:stripAfter]
+            testing = line[1:stripAfter]
         # clause looking for values that only have the sentinel value of "=="
         elif line.startswith("=="):
             stripAfter = line.find("Acceptance Criteria")
             # Get the acceptance criteria
-            acceptanceCriteria = line[19:stripAfter]
+            acceptanceCriteria = line[1:stripAfter]
             # Get the considerations field
             stripAfter = line.find("Considerations")
-            considerations = line[13:stripAfter]
+            considerations = line[1:stripAfter]
 
-        # clause looking for asterisk indicating story descriptors (bullets)
+        # clause looking for asterisk indicating story descriptors (bullets *)
         elif line.startswith("* "):
             stripAfter = line.rfind("(")
             storyDescription = line[2:stripAfter]
