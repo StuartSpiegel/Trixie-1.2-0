@@ -16,7 +16,9 @@ with open('jira_issues.csv', 'w') as file:
         ["Issue Type", "Summary", "Epic Name", "Epic Link", "Description", "Story Points", "Acceptance Criteria",
          "Considerations", "testing"])
     for feature in features:
-        writer.writerow(["Epic", "Epic for feature number " + feature, feature, "", "", "", "", "", ""])
+        writer.writerow(
+            ["Epic", "Epic for feature number " + feature, feature, feature, feature, feature, feature, feature,
+             feature])
     for issue in issueList:
         description = issue[1]
 
@@ -25,7 +27,3 @@ with open('jira_issues.csv', 'w') as file:
             description += "\n * " + "\n * ".join(issue[2])
         writer.writerow(["Story", issue[0], "", issue[-2], description, issue[3]])
         # TODO: Create Epics in JIRA and issue types for Story and Epic -write a unit test for this
-        # if len(issue[3]) > 0:
-        #    description += "\n * " + "\n * ".join(issue[3])
-        # writer.writerow(["Story", issue[0], "", issue[-3], description, issue[4]])  # Continue the append of issues to
-        # allow multi-line comment in JIRA
