@@ -12,9 +12,6 @@ This is [[SAFe Planning#Program_Increment_4| PI-4]] feature.
 ===Assumptions===
 * Wiki data has already been downloaded to hosting machine
 
-===Dependencies===
-
-
 ==Stories (16)==
 ===Research (2)===
 * Research different word document manipulation python libraries (8)

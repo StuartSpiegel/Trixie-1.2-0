@@ -69,7 +69,7 @@ def lighter(percent):
 
 
 def get_story_list(lines):
-    feature = lines[0].rstrip()
+    feature = lines[0].rstrip()  # Remove trailing characters at the end of the line
     projectColor = getLightColor()  # This was changed from randomColor() to
     # getLightColor()
 
@@ -87,7 +87,8 @@ def get_story_list(lines):
     testing = ""
     considerations = ""
 
-    # Parse Acceptance Criteria and Considerations from text file
+    # Set the initial range of lines to search for fields within, parse from the first sentinel string to file
+    # length. redefine the start index on each new parse.
     startIndex = 0
     for k in range(len(lines)):
         if "==Acceptance" or "==Considerations" or "==Stories" in lines[k]:
@@ -96,13 +97,14 @@ def get_story_list(lines):
 
     # In the range of line[0 to lines.length]
     for line in lines[startIndex: len(lines)]:
-        if line.startswith("==="):
+        if line.startswith("==="):  # look for the sentinel value of "===" meaning the line to strip is either
+            # categories: testing, research, or Design and Development
             stripAfter = line.find("(")
             # Get the storyCategory
-            storyCategory = line[3:stripAfter]
+            storyCategory = line[3:stripAfter]  # Get the story category after the initial offset
             # Get the testing field
-            stripAfter = line.find("Testing")
-            testing = line[1:stripAfter]
+            stripAfter = line.find("Testing")  # redefine the offset for the next parse
+            testing = line[1:stripAfter]  # Get the testing field
         # clause looking for values that only have the sentinel value of "=="
         elif line.startswith("=="):
             stripAfter = line.find("Acceptance Criteria")
