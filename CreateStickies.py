@@ -29,7 +29,7 @@ def create_stickies(storyList):
         os.makedirs(OUTPUT_FOLDER_NAME)
 
     document = Document()
-    for i, story in zip(range(len(storyList)), storyList):
+    for i, story in enumerate(storyList):  # TODO: change the iteration logic here to use
         # Make new document at the beginning, or after completing 6 sticky notes
         if i % 6 == 0:
             document = Document(STICKY_TEMPLATE_NAME)
@@ -37,12 +37,8 @@ def create_stickies(storyList):
         paragraph, text_run, corner, title_run, color_run = switcher.get(i % 6)
         populate_title(story[4], document.paragraphs[0]._p.r_lst[title_run])
         populate_color(document.paragraphs[0]._p.r_lst[color_run], story[5])
-        populate_text(document.paragraphs[paragraph]._p.r_lst[text_run], story[0], story[1], story[2], story[3])
+        populate_text(document.paragraphs[paragraph]._p.r_lst[text_run], story[0], story[1], story[2], story[6])
         populate_points(story[3], document.paragraphs[0]._p.r_lst[corner])
-
-        # Call my new methods of PopulateStickies here WITH the acceptanceCriteria, Assumptions, Testings bullets etc
-        # TODO: Change the Array indices of storyList to reflect the correct index of the parsed String
-        # Deleted method calls here to method defined in textProcessing.py as alternative textProcessing.
 
         # Save a new file after making 6 sticky notes (or at the end)
         if i % 6 == 5 or i == len(storyList) - 1:

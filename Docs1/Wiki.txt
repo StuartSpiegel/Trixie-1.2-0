@@ -9,10 +9,12 @@ This is [[SAFe Planning#Program_Increment_4| PI-4]] feature.
 ** Test 1
 ** Test 2
 ==Considerations ==
+
 ===Assumptions===
 * Wiki data has already been downloaded to hosting machine
 
 ==Stories (16)==
+
 ===Research (2)===
 * Research different word document manipulation python libraries (8)
 

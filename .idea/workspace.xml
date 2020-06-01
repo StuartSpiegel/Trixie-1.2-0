@@ -4,24 +4,15 @@
     <list default="true" id="33561dde-8a03-4115-95ed-cf5a3768cb21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CommonUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateStickies.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateStickies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docs1/Wiki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Docs1/Wiki.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs1/Wiki2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Docs1/Wiki2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jira_issues.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jira_issues.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/color_key1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/color_key1.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies1.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies10.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies11.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies12.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies13.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies14.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies15.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies2.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies3.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies4.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies4.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies5.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies6.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies7.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies8.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies9.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

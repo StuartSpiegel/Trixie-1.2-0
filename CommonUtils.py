@@ -89,11 +89,35 @@ def get_story_list(lines):
 
     # Set the initial range of lines to search for fields within, parse from the first sentinel string to file
     # length. redefine the start index on each new parse.
+
+    # startIndex = 0
+    # for k in range(len(lines)):
+    #  if "==Acceptance" or "==Considerations" or "==Stories" in lines[k]: # searching for headings, use for loop to
+    # iterate over range of lines for field categories. We know each category starts at a certain range,
+    # use blank line as sentinel value to know when to stop
+    #    startIndex = k + 1
+    #    break
+
     startIndex = 0
+    nextBlank = 0
+    toParse = []
     for k in range(len(lines)):
-        if "==Acceptance" or "==Considerations" or "==Stories" in lines[k]:
-            startIndex = k + 1
-            break
+        if isEmptyLine(lines[k]):  # Search for the first blank line
+            nextBlank = k
+
+        if "==Acceptance" in lines[k]:
+            startIndex = k + 1  # set the start index (line) to be next line after acceptance criteria
+            for j in range(startIndex, nextBlank):  # We want to parse everything from the acceptance Criteria line
+                # down to the next blank
+                acceptanceCriteria += j
+        elif "==Considerations" in lines[k]:
+            startIndex = k + 1  # adjust the start index
+            for m in range(startIndex, nextBlank):
+                considerations += m
+        elif "==Stories" in lines[k]:
+            startIndex = k + 1  # adjust the start index
+            for v in range(startIndex, nextBlank):
+                storyList += v
 
     # In the range of line[0 to lines.length]
     for line in lines[startIndex: len(lines)]:
@@ -104,15 +128,17 @@ def get_story_list(lines):
             storyCategory = line[3:stripAfter]  # Get the story category after the initial offset
             # Get the testing field
             stripAfter = line.find("Testing")  # redefine the offset for the next parse
-            testing = line[1:stripAfter]  # Get the testing field
+            testing = line[2:stripAfter]  # Get the testing field
         # clause looking for values that only have the sentinel value of "=="
         elif line.startswith("=="):
             stripAfter = line.find("Acceptance Criteria")
             # Get the acceptance criteria
-            acceptanceCriteria = line[1:stripAfter]
+            acceptanceCriteria = line[2:stripAfter]
+
+            # separate the two cases
             # Get the considerations field
             stripAfter = line.find("Considerations")
-            considerations = line[1:stripAfter]
+            considerations = line[2:stripAfter]
 
         # clause looking for asterisk indicating story descriptors (bullets *)
         elif line.startswith("* "):
@@ -130,7 +156,13 @@ def get_story_list(lines):
             # clause is looking for double asterisk indicating that story Info is following, append to storyInfo
         elif line.startswith("**") and storyInfo:
             storyInfo[2].append(line[3:].rstrip())
-            # The "-" will be the sentinel for acceptance criteria
-        elif line.startswith("-") and storyInfo:
-            storyInfo[3].append(line[4].rstrip())
     return storyList
+
+
+def isEmptyLine(string):
+    global x
+    if len(string == 0):
+        x = True
+    elif len(string > 0):
+        x = False
+    return bool(x)
