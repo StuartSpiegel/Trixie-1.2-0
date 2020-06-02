@@ -102,7 +102,7 @@ def get_story_list(lines):
     nextBlank = 0
     toParse = []
     for k in range(len(lines)):
-        if isEmptyLine(lines[k]):  # Search for the first blank line
+        if "   " in lines[k]:  # Search for the first blank line
             nextBlank = k
 
         if "==Acceptance" in lines[k]:
@@ -157,12 +157,3 @@ def get_story_list(lines):
         elif line.startswith("**") and storyInfo:
             storyInfo[2].append(line[3:].rstrip())
     return storyList
-
-
-def isEmptyLine(string):
-    global x
-    if len(string == 0):
-        x = True
-    elif len(string > 0):
-        x = False
-    return bool(x)

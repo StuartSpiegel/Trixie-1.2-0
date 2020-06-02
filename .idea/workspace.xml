@@ -4,15 +4,11 @@
     <list default="true" id="33561dde-8a03-4115-95ed-cf5a3768cb21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CommonUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateStickies.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateStickies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs1/Wiki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Docs1/Wiki.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs1/Wiki2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Docs1/Wiki2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jira_issues.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jira_issues.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/color_key1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/color_key1.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies1.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies2.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky_notes/stickies3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies3.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky_notes/stickies4.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sticky_notes/stickies4.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589477083105</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="--bug fixes in CreateStickies.py&#10;--logic changes in CommonUtils.py for parsing Acceptance&#10;criteria, etc --parsing a range and using sentinel blank lines to stop parser">
+      <created>1591031915177</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1591031915177</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,7 +171,8 @@
     <MESSAGE value="-Create Stickies and JIRA are working&#10;-Color is working&#10;-All field parsing works &#10;-Still some bugs with CreateJIRA.py regrading parsing field into JIRA&#10;-bug fixes" />
     <MESSAGE value="-fixed some bugs with parsing field into JIRA &#10;-code simplification and removal of redundancy" />
     <MESSAGE value="-fixed an issue in CreateJIRA for fileWriter&#10;-creation of test script for JIRA" />
-    <option name="LAST_COMMIT_MESSAGE" value="-fixed an issue in CreateJIRA for fileWriter&#10;-creation of test script for JIRA" />
+    <MESSAGE value="--bug fixes in CreateStickies.py&#10;--logic changes in CommonUtils.py for parsing Acceptance&#10;criteria, etc --parsing a range and using sentinel blank lines to stop parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="--bug fixes in CreateStickies.py&#10;--logic changes in CommonUtils.py for parsing Acceptance&#10;criteria, etc --parsing a range and using sentinel blank lines to stop parser" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
