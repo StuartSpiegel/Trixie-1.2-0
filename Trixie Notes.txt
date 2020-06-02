@@ -1,0 +1,7 @@
+**-Line 106 - commonUtils.py - you are inspecting the same line 
+-edit the logic on line 94 in commonUtils.py
+**-line 135 in CommonUtils.py - appending something so storyInfo[3] means i am appen
+ing to the story Size field, something i likely dont want to do
+**-line 32 in CreateStickies.py look at the enumerate method 
+**-line 40 in the CreateStickies.py - the final argument being passed is the storySize
+(story[3]) but we really want acceptance criteria (story[6])
